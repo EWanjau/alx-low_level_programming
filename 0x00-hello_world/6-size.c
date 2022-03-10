@@ -6,11 +6,13 @@
  * Return: Always 0 (Success)
  */
 int main(void)
-{ 	int intSize;
+{ 	
+	int intSize;
 	char charSize;
 	long int longintSize;
 	long long int llongintSize;
 	float floatSize;	
+	
 	printf("Size of a char: %zu byte(s)\n", sizeof(charSize));
 	printf("Size of an int: %zu byte(s)\n", sizeof(intSize));
 	printf("Size of a long int: %zu byte(s)\n", sizeof(longintSize));
