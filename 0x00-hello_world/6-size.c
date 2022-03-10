@@ -6,8 +6,7 @@
  * Return: Always 0 (Success)
  */
 int main(void)
-{       
-	int intSize;
+{ 	int intSize;
 	char charSize;
 	long int longintSize;
 	long long int llongintSize;
