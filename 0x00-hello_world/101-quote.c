@@ -7,6 +7,7 @@
  */
 int main(void)
 {
-	(stdout, "and that piece of art is useful\" - Dora Korpar, 2015-10-19", strlen("and that piece of art is useful\" - Dora Korpar, 2015-10-19")); 
+	char *s="and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"; 
+	while (*s) putchar(*s++);
 	return (1);
 }
