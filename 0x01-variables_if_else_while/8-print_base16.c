@@ -8,7 +8,7 @@
  */
 
 int main(void){
-	int num;
+	char num;
 
 	printf("%x", num);
 }
