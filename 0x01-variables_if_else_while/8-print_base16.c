@@ -11,4 +11,6 @@ int main(void){
 	char num;
 
 	printf("%x", num);
+	
+	return (0);
 }
