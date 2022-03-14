@@ -9,8 +9,8 @@
 
 int main(void){
 	char num;
-
-	printf("%x", num);
+	num = '0123456789abcdef'
+	putchar(num);
 	
 	return (0);
 }
