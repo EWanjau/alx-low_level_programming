@@ -9,8 +9,7 @@
 
 int main(void){
 	int num;
-	num = 0;
-	while(num >= 0 && num < 10)
+	for(num=0;num<10;num++)
 		printf('%d',num);
 
 	return(0);
