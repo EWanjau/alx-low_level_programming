@@ -1,7 +1,7 @@
-#include <main.h>
+#include "main.h"
 
-/** 
- * main - Program that checks the input for lowercase
+/**
+ * islower - Program that checks the input for lowercase
  *
  * Return: Always 0 (Success)
  */
