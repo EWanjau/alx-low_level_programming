@@ -2,13 +2,13 @@
 
 /**
  * abs(int)- calculates the absolute vaue
- *
- * Return: Alwas 0 (Success)
+ *@r:check absolute
+ * Return: absolute r
  */
 int _abs(int r)
 {
 	if (r < 0)
 		return (-r);
 	else
-		return (r);	
+		return (r);
 }
