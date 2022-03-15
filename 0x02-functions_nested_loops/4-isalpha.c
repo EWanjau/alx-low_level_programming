@@ -1,11 +1,10 @@
-#include <main.h>
+#include "main.h"
 
-/** 
+/**
  *_isalpha - checks alphanumeric keys
- *
- * Return: Always 0 (Success)
+ *@c: sinle letter
+ * Return: returns 1 if c is lower or upper case
  */
-
 int _isalpha(int c)
 {
 	if (c >= 'a' && c <= 'z' | c >= 'A' && c <= 'Z')
