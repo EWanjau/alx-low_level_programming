@@ -1,7 +1,7 @@
-#include <stdio.h>
+#include <main.h>
 
 /**
- * main - Entry point
+ * main - Print a string
  *
  * Return: Always 0 (Success)
  */
@@ -13,7 +13,7 @@ int main(void)
 
 	while (str[i] != '\0')
 	{
-		putchar (str[i]);
+		_putchar (str[i]);
 		i++;
 	}
 	return (0);
