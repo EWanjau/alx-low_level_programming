@@ -5,11 +5,10 @@
  *
  * Return: Alwas 0 (Success)
  */
-int _abs(int)
+int _abs(int r)
 {
-	int n;
-	if (n < 0)
-		return (-n);
+	if (r < 0)
+		return (-r);
 	else
-		return (n);	
+		return (r);	
 }
