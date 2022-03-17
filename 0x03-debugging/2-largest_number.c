@@ -12,12 +12,12 @@ int largest_number(int a, int b, int c)
 {
 	int largest;
 
-	/*if (a < 0)
+	if (a < 0)
 		a = (-1 * a);
 	else if (b < 0)
 		b = (-1 * b);
 	else if (c < 0)
-		c = (-1 * c);*/
+		c = (-1 * c);
 
 	if (a > b && b > c)
 	{
