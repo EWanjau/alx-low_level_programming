@@ -18,7 +18,7 @@ int main(void)
 	{
 		if ((a % 3) == 0)
 		{
-			sum_3 = sum_3 + i;
+			sum_3 = sum_3 + a;
 		} else if ((a % 5) == 0)
 		{
 			sum_5 = sum_5 + a;
