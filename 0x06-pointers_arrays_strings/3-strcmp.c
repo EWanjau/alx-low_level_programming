@@ -1,4 +1,4 @@
-#incude "main.h"
+#include "main.h"
 
 /**
  * _strcmp - compares two srting inputs
@@ -19,5 +19,4 @@ char *_strcmp(char *s1, char *s2)
 		s2++;
 	}
 	return (*(unsigned char*)s1 - *(unsigned char*)s2);
-
 }
