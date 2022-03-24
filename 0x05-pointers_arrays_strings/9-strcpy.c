@@ -16,4 +16,6 @@ char *_strcpy(char *dest, char *src)
 	for (k = 0; dest[i] != '\0'; k++)
 		_putchar(dest[k]);
 	_putchar('\n');
+	
+	return (dest);
 }
