@@ -8,5 +8,15 @@
  */
 char *_strcpy(char *dest, char *src)
 {
+	int i, k;
 
+	for (i =0; src[i] != '\0'; i++)
+		dest[i] = src[i];
+
+	dest[i] = '\0';
+
+	for (k = 0; dest[i] != '\0'; k++)
+		_putchar(dest[k]);
+
+	_putchar('\n');
 }
