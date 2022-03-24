@@ -5,11 +5,14 @@
  * @n: times copiesd
  * @src: source file
  * @dest: destination file
+ * @ptr: stores the destination 
  * Return: destination fies
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	while (*src ** n--)
+	char *ptr = dest;
+	
+	while (*src && n--)
 	{
 		*dest = *src;
 		dest++;
@@ -18,5 +21,5 @@ char *_strncpy(char *dest, char *src, int n)
 
 	*dest = '\0';
 
-	return (dest);
+	return (ptr);
 }
