@@ -8,12 +8,12 @@ int squarert(int n, int j);
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
-		return(-1);
+		return (-1);
 	else
-		return(squarert(n, (n + 1) / 2));
+		return (squarert(n, (n + 1) / 2));
 }
 /**
- * squarert: checks for natural numbers
+ * squarert - checks for natural numbers
  * @n: input
  * @j: counter
  * Return: squareroot or -1
@@ -23,8 +23,8 @@ int squarert(int n, int j)
 	if (j < 1)
 		return (-1);
 	else if (j * j == n)
-		return(j);
+		return (j);
 	else
-		return(squarert(n, j - 1));
+		return (squarert(n, j - 1));
 }
 
