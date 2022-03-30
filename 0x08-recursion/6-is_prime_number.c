@@ -1,11 +1,10 @@
 #include "main.h"
-
+int prime(int n, int j);
 /**
  * is_prime_number - checks for the prime number
  * @n: input
  * Return: 1 for prime number
  */
-int prime(int n, int j);
 int is_prime_number(int n)
 {
 	if (n <= 1)
