@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include "stdio.h"
 /**
  * _strchr - checks the position of a character and returnsthe string
  * @s: the pointer ot the string
