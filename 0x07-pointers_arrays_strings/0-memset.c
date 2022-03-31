@@ -10,16 +10,9 @@
 
 char *_memset(char *s, char b, unsigned int n)
 {
-	int mat[n][*s];
-	int value = b;
-
 	for (int i = 0; i < n; i++)
 	{
-		for (int j = 0; j < *s; j++)
-			mat[i][j] = value;
+		s[i] = b;
 	}
-	
-	_putchar('\0');
-	
 	return (s);
 }
