@@ -6,7 +6,6 @@
  * @c: the character whose index we look for
  * Return: s or null if the character is missing
  */
-
 char *strchr(char *s, char c)
 {
 	while (*s != '\0')
