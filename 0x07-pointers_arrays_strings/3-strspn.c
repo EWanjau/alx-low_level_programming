@@ -9,8 +9,10 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	int count = 0;
+	int i;
+	int j = 0;
 
-	for (int i = 0; s[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] == accept[j])
 			count++;
