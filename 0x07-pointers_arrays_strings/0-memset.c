@@ -7,7 +7,6 @@
  *@n: the number of times the charater wil be copied
  *Return: the pointer to the destination
  */
-
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
