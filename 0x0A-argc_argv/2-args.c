@@ -7,7 +7,7 @@
  * @argv:the name of arguments
  * Return: tota arguments
  */
-int main(int argc, char *argv[]
+int main(int argc, char *argv[])
 {
 	int i = 0; 
 
