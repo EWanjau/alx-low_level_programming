@@ -2,10 +2,12 @@
 #include "stdio.h"
 
 /**
- * whatsmyname - prints the name of a program
- * Reurn: name
+ * main - prints the name of a program
+ * @argc:count of commands
+ * @argv: the carguments
+ * Return: name
  */
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int i;
 
