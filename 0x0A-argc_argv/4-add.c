@@ -9,14 +9,18 @@
  */
 int main(int argc, char *argv[])
 {
-	int i = 0;
-	int add;
+	int i;
+	int add = 0;
 
-	if (argc != 1)
+	if (argc == 1)
+	{
+		printf("0\n");
+	}
+	else if ((argv[] >= 0) && (argv[] <= 9))
 	{
 		for (i = 1; i < argc; i++)
 		{
-			add = atoi(argv[i]) + atoi(argv[i - 1]);
+			add = atoi(argv[i]) + add;
 		}
 		printf("%d\n", add);
 	}
