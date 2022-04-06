@@ -3,7 +3,7 @@
 #include "stdlib.h"
 /**
  * main - multiply numbers
- * @argc;the no of arguments
+ * @argc:the no of arguments
  * @argv: the name of the arguments
  * Return:mulrilacation
  */
@@ -20,5 +20,5 @@ int main(int argc, char *argv[])
 		}
 	}
 	printf("%d\n", mult);
-	return (0);	
+	return (0);
 }
