@@ -6,7 +6,7 @@
  * Return: tota arguments
  */
 int main(int argc, char* argv[])
-{
+{i
 	printf("Arguments: %d\n", argc);
 	return (0);
 }
