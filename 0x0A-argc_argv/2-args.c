@@ -3,9 +3,11 @@
 
 /**
  * main - prints the number of arguments
+ * @argc:number of arguymnets
+ * @argv:the name of arguments
  * Return: tota arguments
  */
-int main(int argc, char* argv[])
+int main(int argc, char *argv[]
 {
 	int i = 0; 
 
