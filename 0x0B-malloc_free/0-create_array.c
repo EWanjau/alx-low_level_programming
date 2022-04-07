@@ -2,7 +2,7 @@
 #include "stdlib.h"
 #include "stdio.h"
 /**
- *create_array - initiatiizes an array 
+ *create_array - initiatiizes an array
  *@size: the size of array
  *@c:the value of array
  *Return: the array
