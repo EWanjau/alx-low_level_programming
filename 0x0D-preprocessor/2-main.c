@@ -4,8 +4,8 @@
  * main - gets the file name being compiled
  * Return: 0 is success
  */
-int main()
+int main(void)
 {
-	printf("%s",__FILE__);
+	printf("%s", __FILE__);
 	return (0);
 }
