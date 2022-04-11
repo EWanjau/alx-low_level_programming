@@ -6,6 +6,6 @@
  */
 int main()
 {
-	printf("The File Name is: %s ",_FILE_);
+	printf("The File Name is: %s ", __FILE__);
 	return (0);
 }
