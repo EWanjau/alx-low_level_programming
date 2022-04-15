@@ -19,11 +19,13 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	/*if (*argv[2] != ('+' || '-' || '*' || '/' || '%'))
+	func = get_op_func(argv[2]);
+	
+	if (!func)
 	{
 		printf("Error\n");
 		exit(99);
-	}*/
+	}
 
 	op = *argv[2];
 	num1 = atoi(argv[1]);
@@ -33,7 +35,6 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
-	func = get_op_func(argv[2]);
 	result = func(num1, num2);
 	printf("%d\n", result);
 
