@@ -6,7 +6,7 @@
  * @n: no of arguments
  * Return: void
  */
-vod print_strings(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list arg;
 	unsigned int i;
