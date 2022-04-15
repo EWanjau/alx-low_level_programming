@@ -9,9 +9,9 @@
  */
 void main(int argc, char *argv[])
 {
-	char *operator;
-	int num1;
-	int num2;
+	char op;
+	int num1, num2, result;
+	int (*func)(int, int);
 
 	if (argc != 4)
 	{
@@ -23,14 +23,19 @@ void main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	if ((*operator == '/' || *operator == '%') && (argv[3] == '0'))
+	
+	op = *argv[2];
+	
+	if ((op == '/' || op == '%') && (argv[3] == '0'))
 	{
 		printf("Error\n");
 		exit(100);
 	}
+	
+	func = get_op_func(argv[2]); 
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
-	operator = argv[2];
-
-	printf("%d\n", get_op_func(operator));
+	
+	result = func(num1, num2);
+	printf("%d\n", result);
 }
