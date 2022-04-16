@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "stdio.h"
 
 /**
  * main - prints possible combinations of three digits
@@ -10,7 +10,7 @@ int main(void)
 
 	for (n = 48; n < 58; n++)
 	{
-		for (x= 49; x< 58; x++)
+		for (x = 49; x < 58; x++)
 		{
 			for (p = 50; p < 58; p++)
 			{
