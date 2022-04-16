@@ -1,24 +1,26 @@
-#include "stdio.h"
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 /**
- * main - prints the numbers 
- * Return: Always 0 (success)
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int n, x;
+	int d;
 
-	for (n = 48; n <= 57; n++)
+	for (d = 0; d < 90; d++)
 	{
-		for (x = 48; x <= 57; x++)
+		for ()
 		{
-			putchar(n);
-			putchar(x);
-			if (n != 57 || x != 57)
-			{
-				putchar(',');
-				putchar(' ');
-			}
+			putchar((d / 10) + '0');
+			putchar((d % 10) + '0');
+		}
+		if (d != 89)
+		{
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
