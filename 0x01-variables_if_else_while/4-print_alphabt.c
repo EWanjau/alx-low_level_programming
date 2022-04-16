@@ -10,11 +10,10 @@ int main(void)
 {
 	char ch;
 
-	while (ch <= 'z')
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
 		if (ch != 'e' && ch != 'q')
 			putchar(ch);
-		ch++;
 	}
 	putchar('\n');
 	return (0);
