@@ -1,16 +1,20 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "stdio.h"
+#include "stdlib.h"
 
 /**
  * main - Entry Point
- * 
+ *
  * Return: Always 0 (Success)
  */
-
-int main(void){
+int main(void)
+{
+	int i;
 	char num;
-	num="0123456789abcdef";
-	putchar(num);
-	
+
+	for (i = '0'; i <= 9; i++)
+		putchar(i);
+	for (num = 'a'; num <= 'f'; num++)
+		putchar(num);
+	putchar('\n');
 	return (0);
 }
