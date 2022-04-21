@@ -1,4 +1,5 @@
 #include "lists.h"
+#include "stddef.h"
 
 /**
  * print_list - prints elemeents of a linked list
@@ -6,21 +7,21 @@
  * @h: pointer to head
  * Return: count
  */ 
-size_t print_list(const list_h *h)
-{	
+size_t print_list(const list_t *h)
+{
+	int count = 0;
+
 	if (h == NULL)
 	{
 		printf("The List is empty");
-		return;
 	}
-	struct list_h *ptr = NULL;
-	ptr = h;
-	while (ptr != NULL)
+	while (h != NULL)
 	{
-		if (str == NULL)
-			printf("[0](nil)");
-		printf("%d %s", ptr->len, ptr->str);
-		ptr = ptr->next;
+		count++;
+		if (h->str == NULL)
+			printf("[0](nil)\n");
+		printf("\n%d %s\n", h->len, h->str);
+		h = h->next;
 	}
-
+	return (count);
 }
