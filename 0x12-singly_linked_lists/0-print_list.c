@@ -6,7 +6,7 @@
  * @list_t: input list
  * @h: pointer to head
  * Return: count
- */ 
+ */
 size_t print_list(const list_t *h)
 {
 	int count = 0;
