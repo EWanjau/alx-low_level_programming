@@ -1,0 +1,21 @@
+#include "lists.h"
+
+/**
+ * print_listint - prints list of integers
+ * @h: the input list
+ * Return: the number of nodes
+ */
+size_t print_listint(const listint_t *h)
+{
+	int count, i;
+
+	if (h == NULL)
+		return (1);
+	while (h != NULL)
+	{
+		count++
+		printf("%u\n", h->n);
+		h = h->next;
+	}
+	return (count);
+}
