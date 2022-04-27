@@ -2,8 +2,8 @@
 #include "stdlib.h"
 
 /**
- * free_listint - frees memory
- * @head: address of start of list
+ * free_listint2 - frees memory
+ * @head: pointer of ponter to  of start of list
  * Return: void
  */
 void free_listint2(listint_t **head)
