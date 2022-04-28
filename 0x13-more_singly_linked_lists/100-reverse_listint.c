@@ -10,6 +10,8 @@ listint_t *reverse_listint(listint_t **head)
 	listint_t *ptr = NULL;
 	listint_t *current = NULL;
 
+	if (!head)
+		return (NULL);
 	while (*head)
 	{
 		current = (*head)->next;
