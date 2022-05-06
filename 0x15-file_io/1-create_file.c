@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 
 /**
  * create_file - creates a new file
@@ -10,28 +10,22 @@ int create_file(const char *filename, char *text_content)
 {
 	int fd, n;
 	int len = 0;
-	char *buff;
 
 	if (!filename)
 		return (-1);
-	if (!text_content)
+
+	fd = open(filename, O_WRONLY|O_CREAT|O_TRUNC, 0600);
+	if (fd < 0)
+		return (-1);
+	if (text_content)
 	{
-		fd = open(filename, O_WRONLY|O_CREAT|O_TRUNC, 600);
-		close(fd);
-		return (1);
+		while (text_content[len])
+			len++;
+		n = write(fd, text_content, len);
+		if (n != len)
+			return (-1);
 	}
-	while(text content)
-	{
-		len++;
-	}
-	fd = open(filename, O_WRONLY|O_CREAT|O_TRUNC, 600);
-
-	buff = malloc(sizeof(char)* len);
-
-	n = read(STDIN_FILENO, buff, len);
-
-	write(STDOUT_FILENO, buff, n);
 	close(fd);
 
-	return (n);
+	return (1);
 }
