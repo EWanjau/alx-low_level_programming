@@ -2,7 +2,7 @@
 
 /**
  * get_endianness - checks if a mchine is big or small endian
- *Return: void
+ *Return: 1 for little and 0 for big
  */
 int get_endianness(void)
 {
