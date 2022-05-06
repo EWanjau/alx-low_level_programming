@@ -7,13 +7,22 @@
  */
 void print_binary(unsigned long int n)
 {
-	int binary = 0, rem = 0, weight = 1;
+	int i = 0, cout = 0;
 
-	while (n)
+	unsigned long int curr;
+
+	for (i = 63; i >= 0; i--)
 	{
-		rem  = n % 2;
-		n = n / 2;
-		binary = binary + (rem * weight);
-		weight = weight * 10;
+		curr = n >> i;
+
+		if (curr & 1)
+		{
+			_putchar('1');
+			cout++;
+		}
+		else if (cout)
+			_putchar('0');
 	}
+	if (!cout)
+		_putchar('0');
 }
