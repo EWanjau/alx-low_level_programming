@@ -7,19 +7,19 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int rem = 0;
-	unsigned int weight = 1;
+	int i;
 	unsigned int dec = 0;
-	int ptr = 0;
 
-	while (*b != '\0')
+	if (!b)
+		return (0);
+
+	for (i = 0; b[i]; i++)
 	{
-		rem = atoi(b) % 10;
-		dec = dec + rem*weight;
-		ptr = b;
-		b = atoi(b) / 10;
-		weight = weight*2;
+		if (b[i] < '0' || b[i] > '1')
+			return (0);
+		dec = 2 * dec + (b[i] - '0');
 	}
+
 	return (dec);
 
 }
