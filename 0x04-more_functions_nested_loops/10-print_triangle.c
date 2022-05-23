@@ -4,17 +4,25 @@
 /**
  * print_triangle - prints triangle n times
  * @size: the number of times to print characters
- * Return: void 
+ * Return: void
  */
 void print_triangle(int size)
 {
-	int i;
-	
 	if (size > 0)
 	{
-		for (i = size; i >= 0; i--)
+		int i, j;
+
+		for (i = 1; i <= size; i++)
 		{
-			_putchar('#');
+			for (j = i; j < size; j++)
+			{
+				_putchar(' ');
+			}
+			for (j = 1; j <= i; j++)
+			{
+				_putchar('#');
+			}
+
 			_putchar('\n');
 		}
 	}
