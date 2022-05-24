@@ -13,10 +13,9 @@ char *string_toupper(char *str)
 	{
 		if (str[i] >= 'a' && str[i] <= 'z')
 		{
-			str[i] =str[i] - 32;
-			_putchar(str[i]);
+			str[i] = str[i] - 32;
 		}
-		i++
+		i++;
 	}
-	_putchar('\0');
+	return (str);
 }
