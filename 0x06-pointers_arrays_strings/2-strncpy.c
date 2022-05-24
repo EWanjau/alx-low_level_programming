@@ -5,7 +5,6 @@
  * @n: bytes to be copied
  * @src: source file
  * @dest: destination file
- * @ptr: stores the destination
  * Return: pointer to destination
  */
 char *_strncpy(char *dest, char *src, int n)
