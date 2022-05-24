@@ -5,12 +5,24 @@
  * @s: input string
  * Return:Always 0
  */
-
 void rev_string(char *s)
 {
-	int j;
+	char tmp;
+	int i, j, len;
 
-	for (j = 10; j >=0; j--)
-		_putchar(s[j]);
+	j = 0;
+
+	while (s[j] != '\0')
+	{
+		j++;
+	}
+	len = j - 1;
+
+	for (i = 0; i < (j / 2); i++)
+	{
+		tmp = s[i];
+		s[i] = s[len];
+		s[len--] = tmp;
+	}
 	_putchar('\n');
 }
