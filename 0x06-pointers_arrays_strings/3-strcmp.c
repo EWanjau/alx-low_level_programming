@@ -3,7 +3,7 @@
 /**
  * _strcmp - compares two srting inputs
  * @s1: input string
- * @s2: secod string
+ * @s2: second string
  * Return: less than zero if s1 is lesser, zero if they compare and more
  * than zero if s1 is greater.
  */
@@ -18,5 +18,5 @@ int _strcmp(char *s1, char *s2)
 		s1++;
 		s2++;
 	}
-	return (*(unsigned char*)s1 - *(unsigned char*)s2);
+	return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }
