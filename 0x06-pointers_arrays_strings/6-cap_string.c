@@ -1,4 +1,4 @@
-#include 'main.h'
+#include "main.h"
 
 /**
  * cap_string - changes to uppercase all strings
@@ -8,32 +8,25 @@
  */
 char *cap_string(char *str)
 {
-	int index = 0;
+	int i, j;
+	char spec[13] = {' ', '\t', '\n', ',', ';',
+			'.', '!', '?', '"', '(', ')', '{', '}'};
 
-	while (str[index])
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		while (!(str[index] >= 'a' && str[index] <= 'z'))
-			index++;
-		if (str[index - 1] == ' '||
-		    str[index - 1] == '\t'||
-		    str[index - 1] == '\n'||
-		    str[index - 1] == ','||
-		    str[index - 1] == ';'||
-		    str[index - 1] == '.'||
-		    str[index - 1] == '!'||
-		    str[index - 1] == '?'||
-		    str[index - 1] == '"'||
-		    str[index - 1] == '('||
-		    str[index - 1] == ')'||
-		    str[index - 1] == '{'||
-		    str[index - 1] == '}'||
-		    index == 0)
+		if (i == 0 && str[i] >= 'a' && str[i] <= 'z')
+			str[i] -= 32;
+		for (j = 0; j < 13; j++)
 		{
-			if(str[index] >= 'a' && str[index] <= 'z')
+			if (str[i] == spec[j])
 			{
-				str[index] = str[index] - 32;
+				if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
+				{
+					str[i + 1] -= 32;
+				}
 			}
 		}
 	}
+
 	return (str);
 }
