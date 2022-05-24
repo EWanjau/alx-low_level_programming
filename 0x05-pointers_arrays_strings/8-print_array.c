@@ -11,12 +11,15 @@ void print_array(int *a, int n)
 {
 	int p;
 
-	for (p = 0; p < (n - 1); p++)
+	for (p = 0; p < n; p++)
 	{
-		printf(" %d, ", a[p]);
-		if (p == n - 1)
+		if (p == 0)
 		{
-			printf("%d", a[n - 1]);
+			printf("%d", a[p]);
+		}
+		else 
+		{
+			printf(", %d", a[p]);
 		}
 	}
 	printf("\n");
