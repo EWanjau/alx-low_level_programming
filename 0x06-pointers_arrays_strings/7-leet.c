@@ -7,18 +7,18 @@
  */
 char *leet(char *s)
 {
-	int index, k;
+	int i, k;
 	int str[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
 	int encode[] = {'4', '3', '0', '7', '1'};
 
-	for (index = 0; s[index] != '\0'; index++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (k = 0; x <= 9; x++)
+		for (k = 0; k <= 9; k++)
 		{
-			if (s[index] == str[x])
+			if (s[i] == str[k])
 			{
-				s[index] = encode[x / 2];
-				x = 9;
+				s[i] = encode[k / 2];
+				k = 9;
 			}
 		}
 	}
