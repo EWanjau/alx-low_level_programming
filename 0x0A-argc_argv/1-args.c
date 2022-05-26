@@ -6,15 +6,8 @@
  * main - prints the number of arguments
  * Return: tota arguments
  */
-int main(int argc, char* argv[])
+int main(int argc, char *argv[] __attribute__((unused)))
 {
-	int i = 0; 
-
-	while (i < argc)
-	{
-		printf("No of Arguments: %d, Name: %s\n", argc, argv[i]);
-		i++;
-	}
-
+	printf("%d\n", argc);
 	return (0);
 }
