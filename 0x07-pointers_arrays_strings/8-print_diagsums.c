@@ -5,17 +5,20 @@
  * print_diagsums - gets the sum of all diagonals in a matrix
  * @size: the size of a matrix
  * @a: points to the elements of the matix
- * Return:the sum 
+ * Return: void
  */
 void print_diagsums(int *a, int size)
 {
-	int i, j;
-	int sum1 = 0;
-	int sum2 = 0;
+	int i;
+	unsigned int sum1, sum2;
 
-	for (i = 0; i <= (size * size); i = i + size + 1)
-		sum1 = sum1 + a[i];
-	for (j = size - 1; j <= (size * size) - size; j = j + size - 1)
-	        sum2 = sum2 + a[j];
-	printf("%d, %d \n", sum1,sum2);	
+	sum1 = 0;
+	sum2 = 0;
+
+	for (i = 0; i < size; i++)
+	{
+		sum1 += a[(size * i) + i];
+		sum2 += a[(size * (i + 1)) - (i + 1)];
+	}
+	printf("%d, %d \n", sum1, sum2);
 }
