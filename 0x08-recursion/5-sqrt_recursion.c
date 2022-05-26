@@ -1,5 +1,4 @@
 #include "main.h"
-int squarert(int n, int j);
 /**
  * _sqrt_recursion - condion chekcer
  * @n: input
@@ -27,4 +26,3 @@ int squarert(int n, int j)
 	else
 		return (squarert(n, j - 1));
 }
-
