@@ -2,47 +2,51 @@
 #include "stdio.h"
 #include "stdlib.h"
 /**
+ * digit - checkc for integers
+ * @s: input digit
+ * Return: 0 for success 1 for error
+ */
+int digit(char *s)
+{
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		if (!(isdigit(s[i])))
+			return (0);
+	}
+	return (0);
+}
+
+/**
  * main - multiply numbers
  * @argc:the no of arguments
  * @argv: the name of the arguments
- * Return:multiplacation
+ * Return: 0 success 1 error
  */
-int add(int argc,char *argv[])
-{
-    int i;
-    int digits[100];
-    int sum = 0;
-
-    for (i = 0; i < argc; i++)
-    {
-        digits[i]= atoi(argv[i]);
-        if ((digits[i] >= 0) && (digits[i] <= 9))
-        {
-            sum+=digits[i];
-            printf("&%d \n", sum);
-        }
-        else
-        {
-            printf("Error\n");
-        }
-
-        return (0);
-    }
-}
-
 int main(int argc, char *argv[])
 {
-    int i;
-    int sum = 0;
+	int i, j;
+	int sum = 0;
 
-    if (argc == 1)
-    {
-        printf("0\n");
-    }
-    else
-    {
-        sum = add(argc,argv);
-    }
-
-    return (0);
+	if (argc < 2)
+	{
+		printf("0\n");
+		return (1);
+	}
+	for (i = 1; i < argc; i++)
+	{
+		if (digit(argv[i]))
+		{
+			j = atoi(argv[i]);
+			sum += j;
+		}
+		else
+		{
+			printf("Error\n");
+			return (1);
+		}
+	}
+	printf("%d\n", sum);
+	return (0);
 }
