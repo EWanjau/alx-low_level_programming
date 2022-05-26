@@ -2,25 +2,31 @@
 #include "stdlib.h"
 
 /**
- * _strdup - duplicates a striing
- * @str: the inut
- * Return: array
+ * _strdup - checks for duplicate a string
+ * @str: the input
+ * Return: pointer to the duplicate str
  */
 char *_strdup(char *str)
 {
 	int i, size;
 	char *arr;
 
+	i = 0;
+	size = 0;
+
 	if (str == NULL)
 		return (NULL);
-	for (i = 0; i <= *str; i++)
-		size = size + 1;
-	arr = malloc(sizeof(char) * size);
 
-	for (i = 0; i < size; i++)
-		arr[i] = str[i];
+	while (str[size])
+		size++;
+
+	arr = malloc(sizeof(char) * (size + 1));
+
 	if (arr == NULL)
 		return (NULL);
-	return (arr);
 
+	while ((arr[i] = str[i]) != '\0')
+		i++;
+
+	return (arr);
 }
