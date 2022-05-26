@@ -4,6 +4,8 @@
 
 /**
  * main - prints the number of arguments
+ * @argc: argument counter
+ * @argv: argument vector(name)
  * Return: tota arguments
  */
 int main(int argc, char *argv[] __attribute__((unused)))
