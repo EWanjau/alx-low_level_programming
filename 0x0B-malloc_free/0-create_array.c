@@ -1,6 +1,5 @@
 #include "main.h"
-#include "stdlib.h"
-#include "stdio.h"
+
 /**
  *create_array - initiatiizes an array
  *@size: the size of array
@@ -9,16 +8,23 @@
  */
 char *create_array(unsigned int size, char c)
 {
-	unsigned int i;
+	unsigned int i = 0;
 	char *arr;
 
-	arr = malloc(sizeof(char) * size);
-
-	if (size == 0 || arr == NULL)
+	if (size == 0)
 		return (NULL);
-	for (i = 0; i < size; i++)
-		arr[i] = c;
+
+	arr = (char *) malloc(sizeof(char) * size);
+
+	if (arr == NULL)
+		return (NULL);
+
+	while (i < size)
+	{
+		*(arr + i) = c;
+		i++;
+	}
+	*(arr + i) = '\0';
+
 	return (arr);
-
-
 }
