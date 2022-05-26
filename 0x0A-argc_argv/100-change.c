@@ -1,7 +1,12 @@
 #include "stdio.h"
 #include "stdlib.h"
 
-
+/**
+ * main - returns no of coins in a number
+ * @argc: argument counter
+ * @argv: argument vector
+ * Return: 0 always success
+ */
 int main(int argc, char *argv[])
 {
 	int num, i, result;
