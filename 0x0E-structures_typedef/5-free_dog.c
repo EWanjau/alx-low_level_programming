@@ -2,7 +2,7 @@
 #include "stdio.h"
 
 /**
- * free_dog - freees memory
+ * free_dog - frees memory
  * @d: input
  */
 void free_dog(dog_t *d)
