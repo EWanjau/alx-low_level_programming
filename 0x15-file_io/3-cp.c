@@ -48,7 +48,7 @@ int _cp(char *file_from, char *file_to)
 		if (fd_w == -1 || write(fd_w, buf, count) != count)
 		{
 			_close(fd_r);
-			dfprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			exit(99);
 		}
 	}
