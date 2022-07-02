@@ -33,13 +33,7 @@ int _cp(char *file_from, char *file_to)
 	int fd_r, fd_w, count;
 	char buf[1024];
 
-	fd_r = open(file_from, O_RDONLY);
-
-	if (fd_r == -1)
-	{
-		dprintf(2, "Error: Can't read from file %s\n", file_from);
-		exit(98);
-	}
+	fd_r = open(file_from, O_RDONLY)
 
 	fd_w = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 
@@ -47,7 +41,7 @@ int _cp(char *file_from, char *file_to)
 	{
 		if (fd_w == -1 || count == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to file %s \n", file_to);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 			_close(fd_w);
 			exit(98);
 		}
