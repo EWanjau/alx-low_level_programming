@@ -52,6 +52,11 @@ int _cp(char *file_from, char *file_to)
 			exit(99);
 		}
 	}
+	if (count == -1)
+	{
+		dprintf(2, "Error: Can't read from file %s\n", file_from);
+		exit(98);
+	}
 	_close(fd_r);
 	_close(fd_w);
 
