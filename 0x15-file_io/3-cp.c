@@ -35,13 +35,19 @@ int _cp(char *file_from, char *file_to)
 
 	fd_r = open(file_from, O_RDONLY);
 
+	if (fd_r == -1)
+	{
+		dprintf(2, "Error: Can't read from file %s\n", file_from);
+		exit(98);
+	}
+
 	fd_w = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 
 	while ((count = read(fd_r, buf, 1024)))
 	{
-		if (fd_r == -1 || count == -1)
+		if (fd_w == -1 || count == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s \n", file_from);
+			dprintf(STDERR_FILENO, "Error: Can't write to file %s \n", file_to);
 			_close(fd_w);
 			exit(98);
 		}
@@ -50,7 +56,7 @@ int _cp(char *file_from, char *file_to)
 			_close(fd_r);
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			exit(99);
-		}
+		} 
 	}
 	if (count == -1)
 	{
