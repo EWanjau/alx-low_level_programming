@@ -71,6 +71,9 @@ int _cp(char *file_from, char *file_to)
  */
 int _close(int fd)
 {
+	if (fd < 0)
+		return (1);
+
 	if (close(fd) == -1)
 	{
 		dprintf(2, "Error: Can't close fd %d\n", fd);
