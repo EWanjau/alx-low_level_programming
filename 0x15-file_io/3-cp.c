@@ -39,7 +39,7 @@ int _cp(char *file_from, char *file_to)
 
 	while ((count = read(fd_r, buf, 1024)))
 	{
-		if (fd_w == -1 || count == -1)
+		if (fd_r == -1 || count == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 			_close(fd_w);
