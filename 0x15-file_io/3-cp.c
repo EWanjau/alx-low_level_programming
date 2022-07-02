@@ -33,7 +33,7 @@ int _cp(char *file_from, char *file_to)
 	int fd_r, fd_w, count;
 	char buf[1024];
 
-	fd_r = open(file_from, O_RDONLY)
+	fd_r = open(file_from, O_RDONLY);
 
 	fd_w = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 
@@ -50,7 +50,7 @@ int _cp(char *file_from, char *file_to)
 			_close(fd_r);
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			exit(99);
-		} 
+		}
 	}
 	_close(fd_r);
 	_close(fd_w);
