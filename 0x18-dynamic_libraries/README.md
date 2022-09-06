@@ -22,11 +22,11 @@ The following steps are followed in creation of a Dynamically linked file;
 1. Create a folder of all C files you intend to include in the library.
 2. Include all the function prototypes in a header file(**_header_file.h_**).
 3. Create object files from the C files using the following command;
-        
-        ```
-        gcc *.c -c -fPIC
-        ```
-        <!-- *.c selects all c files, -c flag creates object files without linking them, and -fPIC specifies an independent position for where the files will be loaded in memory-->
+
+```
+gcc *.c -c -fPIC
+```
+<!-- *.c selects all c files, -c flag creates object files without linking them, and -fPIC specifies an independent position for where the files will be loaded in memory-->        
 
 4. Create the Library file using the command below;
 
