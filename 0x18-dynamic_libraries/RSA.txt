@@ -1,0 +1,16 @@
+Factorize as many numbers as possible into a product of two smaller numbers.
+Usage:
+    factors <file>
+file contains the numbers one per line
+valid natural numbers greater than 1
+no empty space or line before or after the number
+file ends with a new line
+
+Output:
+        n = p * q
+        one factorization per line
+        p, q are not prime numbers necessarily
+        no dependencies
+        executable file called, factors
+
+   
